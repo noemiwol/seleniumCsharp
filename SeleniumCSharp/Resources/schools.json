@@ -1,0 +1,14 @@
+{
+  "school": [
+    {
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "email": "jan.kowalski@email.pl",
+      "phone": "+48 123456789",
+      "school": "I LO w Katowicach",
+      "address": "al. Korfantego 193",
+      "city": "Katowice"
+    }
+  ]
+
+}

@@ -1,0 +1,13 @@
+﻿# Ignorowanie plików tymczasowych
+[Tt]emp/
+[Oo]bj/
+ 
+# Ignorowanie plików wyjściowych kompilacji
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+ 
+# Ignorowanie plików konfiguracyjnych
+*.suo
+*.user
+*.sln.docstates
