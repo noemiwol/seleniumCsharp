@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using SeleniumCSharp.FunctionalTests.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace SeleniumCSharp.FunctionalTests.Tests
 {
@@ -13,10 +14,23 @@ namespace SeleniumCSharp.FunctionalTests.Tests
         private NavMenu navMenu;
         private ExpertsPage expertsPage;
         private ExpertDetailsModal expertDetailsModal;
+        private IConfiguration _configuration;
+
+        public ExpertPageTests()
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
+            _configuration = builder.Build();
+        }
 
         [SetUp]
         public void Setup()
         {
+            // Pobieranie baseUrl z nowej konfiguracji
+            string baseUrl = _configuration["BaseUrl"];
+
             // Tworzenie instancji WebDriver
             _driver = new ChromeDriver();
 
@@ -27,8 +41,9 @@ namespace SeleniumCSharp.FunctionalTests.Tests
 
             // Konfiguracja przeglądarki
             _driver.Manage().Window.Maximize();
-            _driver.Navigate().GoToUrl("https://akademia.librus.pl/");
+            _driver.Url = baseUrl;
         }
+
 
         [Test]
         public void TestGoToTrainingPage_When_ClickExpertssOnNavMenu()
@@ -45,7 +60,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             string currentUrl = _driver.Url;
 
             // Sprawdzenie, czy URL zawiera określony tekst
-            Assert.IsTrue(currentUrl.Contains("/nasi-eksperci"));
+            Assert.That(currentUrl.Contains("/nasi-eksperci"));
         }
         [Test]
         public void TestExpertsPageHeaderIsCorrect()

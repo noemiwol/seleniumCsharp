@@ -10,6 +10,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumCSharp.FunctionalTests.Models;
 using SeleniumCSharp.PageComponents;
+using Microsoft.Extensions.Configuration;
 
 namespace SeleniumCSharp.FunctionalTests.Tests
 {
@@ -17,23 +18,36 @@ namespace SeleniumCSharp.FunctionalTests.Tests
     {
         private IWebDriver _driver;
         private HomePage homePage;
-        private LoginPage loginPage;
         private NavMenu navMenu;
         private SearchField searchField;
         private TrainingsPage trainingsPage;
         private CourseContentPage courseContentPage;
         private UnloggedUserModal modal;
         private VideoPlayer videoPlayer;
+        private IConfiguration _configuration;
+
+        public PlayVideoAsLicensedUserTests()
+        {
+            var builder = new ConfigurationBuilder()
+             .SetBasePath(AppContext.BaseDirectory)
+             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
+            _configuration = builder.Build();
+
+        }
+
 
         [SetUp]
         public void Setup()
         {
+            // Pobieranie baseUrl z nowej konfiguracji
+            string baseUrl = _configuration["BaseUrl"];
+
             // Tworzenie instancji WebDriver
             _driver = new ChromeDriver();
 
             // Inicjalizacja obiektów stron
             homePage = new HomePage(_driver);
-            loginPage = new LoginPage(_driver);
             navMenu = new NavMenu(_driver);
             searchField = new SearchField(_driver);
             trainingsPage = new TrainingsPage(_driver);
@@ -43,7 +57,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
 
             // Konfiguracja przeglądarki
             _driver.Manage().Window.Maximize();
-            _driver.Navigate().GoToUrl("https://akademia.librus.pl");
+            _driver.Url = baseUrl;
         }
 
         [Test]
@@ -60,7 +74,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             string currentUrl = _driver.Url;
 
             // Sprawdzenie, czy URL zawiera określony tekst
-            Assert.IsTrue(currentUrl.Contains("/szkolenia"));
+            Assert.That(currentUrl.Contains("/szkolenia"));
         }
         [Test]
         public void TestVerifySearchResultsForValidInput()
@@ -128,7 +142,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             bool isTimeParsed = TimeSpan.TryParse(playbackTimeText, out playbackTime);
 
             // Sprawdzenie, czy konwersja się powiodła i czy czas jest większy niż zero
-            Assert.IsTrue(isTimeParsed && playbackTime > TimeSpan.Zero, $"Playback time {playbackTime} is not greater than 00:00:00");
+            Assert.That(isTimeParsed && playbackTime > TimeSpan.Zero, $"Playback time {playbackTime} is not greater than 00:00:00");
 
         }
 

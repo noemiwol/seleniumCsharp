@@ -1,16 +1,14 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+﻿﻿FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+﻿# Ustawienie środowiska pracy
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /app
+
+# Instalacja ChromeDriver
+RUN apt-get update -y && apt-get install -y wget unzip
+RUN wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
+RUN unzip chromedriver_linux64.zip -d /usr/local/bin/
+RUN rm chromedriver_linux64.zip
 
 # Kopiowanie projektu i jego przywracanie
 COPY *.csproj ./
 RUN dotnet restore
-
-# Kopiowanie reszty plików i budowanie aplikacji
-COPY . ./
-RUN dotnet publish -c Release -o out
-
-# Uruchomienie testów
-FROM mcr.microsoft.com/dotnet/runtime:6.0
-WORKDIR /app
-COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "test", "--logger:trx"]
