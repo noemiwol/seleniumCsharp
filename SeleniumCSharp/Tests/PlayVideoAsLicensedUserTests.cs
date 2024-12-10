@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SeleniumCSharp.FunctionalTests.Pages;
-using OpenQA.Selenium.Chrome;
-using SeleniumCSharp.FunctionalTests.PageComponents;
+﻿using Microsoft.Extensions.Configuration;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using SeleniumCSharp.FunctionalTests.Models;
+using SeleniumCSharp.FunctionalTests.PageComponents;
+using SeleniumCSharp.FunctionalTests.Pages;
 using SeleniumCSharp.PageComponents;
-using Microsoft.Extensions.Configuration;
 
 namespace SeleniumCSharp.FunctionalTests.Tests
 {
@@ -33,9 +28,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
              .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
             _configuration = builder.Build();
-
         }
-
 
         [SetUp]
         public void Setup()
@@ -76,6 +69,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             // Sprawdzenie, czy URL zawiera określony tekst
             Assert.That(currentUrl.Contains("/szkolenia"));
         }
+
         [Test]
         public void TestVerifySearchResultsForValidInput()
         {
@@ -108,7 +102,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             // Uży danych pierwszego szkolenia
             var trainingFirst = trainingData.training[1];
 
-            //Wprowadzanie do wyszukiwarki danych 
+            //Wprowadzanie do wyszukiwarki danych
             searchField.EnterNameTraining(trainingFirst.Name);
             trainingsPage.ClickResultSearchTraining();
 
@@ -116,12 +110,11 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             string actualTrainingName = courseContentPage.GetNameTraining();
 
             Assert.That(actualTrainingName, Is.EqualTo(expectedTrainingName));
-
         }
         [Test]
         public void TestVideoPlaybackTimeGreaterThanZero_When_ClikWatchTheTrailer()
         {
-            // Kliknięcie przycisku Szkolenia w navManu
+            // Kliknięcie przycisku Szkolenia w navMenu
             navMenu.SelectTrainings();
 
             // Wpisz nazwę szkolenia
@@ -133,23 +126,29 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             searchField.EnterNameTraining(trainingFirst.Name);
             trainingsPage.ClickResultSearchTraining();
 
+            // Kliknięcie przycisku "Obejrzyj trailer"
             courseContentPage.ClickWatchTrailerButton();
 
-            string playbackTimeText = videoPlayer.GetPlaybackTimeText();
-            TimeSpan playbackTime;
+            // Pobierz czas odtwarzania
+            TimeSpan playbackTime = videoPlayer.GetVideoPlaybackTime();
 
-            // Konwersja tekstu na TimeSpan
-            bool isTimeParsed = TimeSpan.TryParse(playbackTimeText, out playbackTime);
-
-            // Sprawdzenie, czy konwersja się powiodła i czy czas jest większy niż zero
-            Assert.That(isTimeParsed && playbackTime > TimeSpan.Zero, $"Playback time {playbackTime} is not greater than 00:00:00");
-
+            // Sprawdzenie, czy czas odtwarzania jest większy niż zero
+            Assert.That(playbackTime > TimeSpan.Zero, $"Playback time {playbackTime} is not greater than 00:00:00");
         }
+
+
+
 
         [TearDown]
         public void TearDown()
         {
-            _driver.Quit();
+            if (_driver != null)
+            {
+                System.Threading.Thread.Sleep(2000);
+
+                _driver.Quit();
+                _driver.Dispose();
+            }
         }
     }
 }

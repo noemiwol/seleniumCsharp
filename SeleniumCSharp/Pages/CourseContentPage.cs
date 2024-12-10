@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 
 namespace SeleniumCSharp.FunctionalTests.Pages
 {
-
     internal class CourseContentPage
     {
         private IWebDriver _driver;
@@ -18,6 +12,7 @@ namespace SeleniumCSharp.FunctionalTests.Pages
         {
             _driver = driver;
         }
+
         public string GetNameTraining()
         {
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
@@ -32,6 +27,7 @@ namespace SeleniumCSharp.FunctionalTests.Pages
             IWebElement watchButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".MuiButton-root.MuiLoadingButton-root.MuiButton-containedPrimary")));
             watchButton.Click();
         }
+
         public void ClickWatchTrailerButton()
         {
             Thread.Sleep(2000); // Czekaj 2 sekund
@@ -39,6 +35,7 @@ namespace SeleniumCSharp.FunctionalTests.Pages
             IWebElement watchButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//button[contains(text(), 'Zobacz zwiastun')]")));
             watchButton.Click();
         }
+
         public void ClickWatchTrainingButtonAfterLogged()
         {
             Thread.Sleep(2000); // Czekaj 2 sekund
@@ -49,9 +46,5 @@ namespace SeleniumCSharp.FunctionalTests.Pages
             // Krótkie opóźnienie, aby dać wideo czas na rozpoczęcie
             Thread.Sleep(2000); // Czekaj 2 sekund
         }
-
-
-
-
     }
 }

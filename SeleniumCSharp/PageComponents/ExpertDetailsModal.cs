@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 
@@ -21,9 +16,8 @@ namespace SeleniumCSharp.FunctionalTests.PageComponents
         public string GetDescription()
         {
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-            IWebElement descriptionElement = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//p[contains(@class, 'MuiTypography-paragraph3--regular') and contains(@class, 'css-sna552')]")));
+            IWebElement descriptionElement = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//p[contains(@class, 'MuiTypography-paragraph3--regular') and contains(@class, 'css-q9u1zd')]")));
             return descriptionElement.Text;
         }
-
     }
 }

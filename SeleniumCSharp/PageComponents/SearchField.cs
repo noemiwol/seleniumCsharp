@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumCSharp.FunctionalTests.PageComponents
@@ -24,11 +19,7 @@ namespace SeleniumCSharp.FunctionalTests.PageComponents
             searchField.Clear();
             searchField.SendKeys(name);
             // Czekaj 2 sekund
-            Thread.Sleep(2000); 
-
-
-
+            Thread.Sleep(2000);
         }
-
     }
 }

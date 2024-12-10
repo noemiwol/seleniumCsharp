@@ -11,3 +11,6 @@
 *.suo
 *.user
 *.sln.docstates
+Dockerfile.txt
+
+.vs/

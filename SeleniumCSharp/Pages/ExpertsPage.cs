@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 
@@ -18,6 +12,7 @@ namespace SeleniumCSharp.FunctionalTests.Pages
         {
             _driver = driver;
         }
+
         public string GetCurrentUrl()
         {
             return _driver.Url;
@@ -29,6 +24,7 @@ namespace SeleniumCSharp.FunctionalTests.Pages
             IWebElement expertsElement = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("span.MuiTypography-root")));
             return expertsElement.Text;
         }
+
         public string GetShortDescription(string nameSurname)
         {
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
@@ -36,6 +32,7 @@ namespace SeleniumCSharp.FunctionalTests.Pages
 
             return expertInfo.Text;
         }
+
         public void ClickMoreInfoButton()
         {
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
