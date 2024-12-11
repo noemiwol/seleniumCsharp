@@ -4,7 +4,7 @@ using SeleniumExtras.WaitHelpers;
 
 namespace SeleniumCSharp.FunctionalTests.PageComponents
 {
-    internal class UnloggedUserModal
+    public class UnloggedUserModal
     {
         private IWebDriver _driver;
 

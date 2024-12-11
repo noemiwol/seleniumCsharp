@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumCSharp.FunctionalTests.Pages
 {
-    internal class TrainingsPage
+    public class TrainingsPage
     {
         private IWebDriver _driver;
 

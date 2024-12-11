@@ -1,51 +1,21 @@
-﻿using Microsoft.Extensions.Configuration;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
-using SeleniumCSharp.FunctionalTests.Models;
+﻿using SeleniumCSharp.FunctionalTests.Pages;
 using SeleniumCSharp.FunctionalTests.PageComponents;
-using SeleniumCSharp.FunctionalTests.Pages;
+using SeleniumCSharp.FunctionalTests.Models;
+using NUnit.Framework;
+using OpenQA.Selenium.Support.UI;
 using SeleniumCSharp.PageComponents;
 
 namespace SeleniumCSharp.FunctionalTests.Tests
 {
-    public class PlayVideoAsLicensedUserTests
+    public class PlayVideoAsLicensedUserTests : BaseTest
     {
-        private IWebDriver _driver;
-        private HomePage homePage;
-        private NavMenu navMenu;
-        private SearchField searchField;
-        private TrainingsPage trainingsPage;
-        private CourseContentPage courseContentPage;
-        private UnloggedUserModal modal;
         private VideoPlayer videoPlayer;
-        private IConfiguration _configuration;
-
-        public PlayVideoAsLicensedUserTests()
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(AppContext.BaseDirectory)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-
-            _configuration = builder.Build();
-        }
 
         [SetUp]
-        public void Setup()
+        public override void SetUp()
         {
-            string baseUrl = _configuration["BaseUrl"];
-            _driver = new ChromeDriver();
-
-            homePage = new HomePage(_driver);
-            navMenu = new NavMenu(_driver);
-            searchField = new SearchField(_driver);
-            trainingsPage = new TrainingsPage(_driver);
-            courseContentPage = new CourseContentPage(_driver);
-            modal = new UnloggedUserModal(_driver);
+            base.SetUp();
             videoPlayer = new VideoPlayer(_driver);
-
-            _driver.Manage().Window.Maximize();
-            _driver.Url = baseUrl;
         }
 
         [Test]
@@ -57,7 +27,6 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             // Act
             navMenu.SelectTrainings();
             wait.Until(d => d.Url.Contains("/szkolenia"));
-
             string currentUrl = _driver.Url;
 
             // Assert
@@ -70,6 +39,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             // Arrange
             var trainingData = TestTrainingData.LoadFromJson("../../../Resources/trainings.json");
             var training = trainingData.training[0];
+            string expectedTrainingName = "Zajęcia specjalistyczne w module Dzienniki zajęć dodatkowych";
 
             // Act
             navMenu.SelectTrainings();
@@ -77,7 +47,6 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             string actualTrainingName = trainingsPage.GetResultSearch();
 
             // Assert
-            string expectedTrainingName = "Zajęcia specjalistyczne w module Dzienniki zajęć dodatkowych";
             Assert.That(actualTrainingName, Is.EqualTo(expectedTrainingName));
         }
 
@@ -87,6 +56,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             // Arrange
             var trainingData = TestTrainingData.LoadFromJson("../../../Resources/trainings.json");
             var trainingFirst = trainingData.training[1];
+            string expectedTrainingName = "Dziennik świetlicy – odkryj jego potencjał";
 
             // Act
             navMenu.SelectTrainings();
@@ -95,7 +65,6 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             string actualTrainingName = courseContentPage.GetNameTraining();
 
             // Assert
-            string expectedTrainingName = "Dziennik świetlicy – odkryj jego potencjał";
             Assert.That(actualTrainingName, Is.EqualTo(expectedTrainingName));
         }
 
@@ -115,17 +84,6 @@ namespace SeleniumCSharp.FunctionalTests.Tests
 
             // Assert
             Assert.That(playbackTime > TimeSpan.Zero, $"Playback time {playbackTime} is not greater than 00:00:00");
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            if (_driver != null)
-            {
-                Thread.Sleep(2000);
-                _driver.Quit();
-                _driver.Dispose();
-            }
         }
     }
 }
