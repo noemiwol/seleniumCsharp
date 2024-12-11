@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using SeleniumCSharp.FunctionalTests.PageComponents;
@@ -55,7 +54,7 @@ namespace SeleniumCSharp.FunctionalTests
         {
             if (_driver != null)
             {
-                Thread.Sleep(2000); // Opcjonalne
+                Thread.Sleep(2000);
                 _driver.Quit();
                 _driver.Dispose();
             }
