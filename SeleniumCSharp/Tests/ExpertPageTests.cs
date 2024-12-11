@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace SeleniumCSharp.FunctionalTests.Tests
 {
-    internal class ExpertPageTests
+    public class ExpertPageTests
     {
         private IWebDriver _driver;
         private NavMenu navMenu;
@@ -28,101 +28,88 @@ namespace SeleniumCSharp.FunctionalTests.Tests
         [SetUp]
         public void Setup()
         {
-            // Pobieranie baseUrl z nowej konfiguracji
             string baseUrl = _configuration["BaseUrl"];
-
-            // Tworzenie instancji WebDriver
             _driver = new ChromeDriver();
 
-            // Inicjalizacja obiektów stron
             navMenu = new NavMenu(_driver);
             expertsPage = new ExpertsPage(_driver);
             expertDetailsModal = new ExpertDetailsModal(_driver);
 
-            // Konfiguracja przeglądarki
             _driver.Manage().Window.Maximize();
             _driver.Url = baseUrl;
         }
 
-
         [Test]
-        public void TestGoToTrainingPage_When_ClickExpertssOnNavMenu()
+        public void TestGoToTrainingPage_When_ClickExpertsOnNavMenu()
         {
-            // Kliknięcie przycisku Eksperci w navManu
-            navMenu.SelectExperts();
-
-
-            // Oczekiwanie na przekierowanie
+            // Arrange
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-            wait.Until(d => d.Url.Contains("/nasi-eksperci"));
 
-            // Pobranie aktualnego URL
+            // Act
+            navMenu.SelectExperts();
+            wait.Until(d => d.Url.Contains("/nasi-eksperci"));
             string currentUrl = _driver.Url;
 
-            // Sprawdzenie, czy URL zawiera określony tekst
+            // Assert
             Assert.That(currentUrl.Contains("/nasi-eksperci"));
         }
+
         [Test]
         public void TestExpertsPageHeaderIsCorrect()
         {
-            // Kliknięcie przycisku Eksperci w navManu
-            navMenu.SelectExperts();
-
-
+            // Arrange
             string expectedHeader = "EKSPERCI AKADEMII LIBRUS";
+
+            // Act
+            navMenu.SelectExperts();
             string actualHeader = expertsPage.GetHeader();
 
+            // Assert
             Assert.That(actualHeader, Is.EqualTo(expectedHeader));
         }
+
         [Test]
         public void TestCheckingShortDescription()
         {
-            // Kliknięcie przycisku Eksperci w navManu
-            navMenu.SelectExperts();
-
-            //
-
-            // JSON experts
+            // Arrange
             var expertData = TestExpertProfileProcessor.LoadFromJson("../../../Resources/experts.json");
-
-            // Uży danych experta
             var expert = expertData.expert[0];
             string nameSurname = expert.NameSurname;
-            expertsPage.GetShortDescription(nameSurname);
-
             string expectedShortDescription = expert.ShortDescription;
+
+            // Act
+            navMenu.SelectExperts();
             string actualShortDescription = expertsPage.GetShortDescription(nameSurname);
 
-            // Sprawdzenie, czy wyświetla się określony tekst
+            // Assert
             Assert.That(actualShortDescription, Is.EqualTo(expectedShortDescription));
         }
 
         [Test]
         public void TestCheckingDescription()
         {
-            // Click on the 'Experts' button in navMenu
-            navMenu.SelectExperts();
-
-            // Load expert data from JSON
+            // Arrange
             var expertData = TestExpertProfileProcessor.LoadFromJson("../../../Resources/experts.json");
-            var expert = expertData.expert[0]; // Use the first expert for testing
-
-            expertsPage.ClickMoreInfoButton();
-
-            // Pobieranie opisu z JSON
+            var expert = expertData.expert[0];
             string expectedDescription = expert.Description;
-            // Pobieranie opisu z strony
+
+            // Act
+            navMenu.SelectExperts();
+            expertsPage.ClickMoreInfoButton();
             string actualDescription = expertDetailsModal.GetDescription();
 
-            // Sprawdzenie, czy wyświetla się określony tekst
+            // Assert
             Assert.That(actualDescription, Is.EqualTo(expectedDescription));
         }
-
 
         [TearDown]
         public void TearDown()
         {
-            _driver.Quit();
+            if (_driver != null)
+            {
+                _driver.Quit();
+                _driver.Dispose();
+            }
         }
     }
 }

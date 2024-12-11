@@ -24,8 +24,8 @@ namespace SeleniumCSharp.FunctionalTests.Tests
         public PlayVideoAsLicensedUserTests()
         {
             var builder = new ConfigurationBuilder()
-             .SetBasePath(AppContext.BaseDirectory)
-             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
             _configuration = builder.Build();
         }
@@ -33,13 +33,9 @@ namespace SeleniumCSharp.FunctionalTests.Tests
         [SetUp]
         public void Setup()
         {
-            // Pobieranie baseUrl z nowej konfiguracji
             string baseUrl = _configuration["BaseUrl"];
-
-            // Tworzenie instancji WebDriver
             _driver = new ChromeDriver();
 
-            // Inicjalizacja obiektów stron
             homePage = new HomePage(_driver);
             navMenu = new NavMenu(_driver);
             searchField = new SearchField(_driver);
@@ -48,7 +44,6 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             modal = new UnloggedUserModal(_driver);
             videoPlayer = new VideoPlayer(_driver);
 
-            // Konfiguracja przeglądarki
             _driver.Manage().Window.Maximize();
             _driver.Url = baseUrl;
         }
@@ -56,96 +51,78 @@ namespace SeleniumCSharp.FunctionalTests.Tests
         [Test]
         public void TestGoToTrainingPage_When_ClickTrainingsOnNavMenu()
         {
-            // Kliknięcie przycisku Szkolenia w navManu
-            navMenu.SelectTrainings();
-
-            // Oczekiwanie na przekierowanie
+            // Arrange
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+
+            // Act
+            navMenu.SelectTrainings();
             wait.Until(d => d.Url.Contains("/szkolenia"));
 
-            // Pobranie aktualnego URL
             string currentUrl = _driver.Url;
 
-            // Sprawdzenie, czy URL zawiera określony tekst
+            // Assert
             Assert.That(currentUrl.Contains("/szkolenia"));
         }
 
         [Test]
         public void TestVerifySearchResultsForValidInput()
         {
-            // Kliknięcie przycisku Szkolenia w navManu
-            navMenu.SelectTrainings();
-
-            // Wpisz nazwę szkolenia
+            // Arrange
             var trainingData = TestTrainingData.LoadFromJson("../../../Resources/trainings.json");
-
-            // Użyj danych  szkolenia
             var training = trainingData.training[0];
 
+            // Act
+            navMenu.SelectTrainings();
             searchField.EnterNameTraining(training.Name);
-
-            string expectedTrainingName = "Zajęcia specjalistyczne w module Dzienniki zajęć dodatkowych";
             string actualTrainingName = trainingsPage.GetResultSearch();
 
+            // Assert
+            string expectedTrainingName = "Zajęcia specjalistyczne w module Dzienniki zajęć dodatkowych";
             Assert.That(actualTrainingName, Is.EqualTo(expectedTrainingName));
         }
 
         [Test]
         public void TestRedirectionToCorrectTrainingPage_When_ClickingSearchResult()
         {
-            // Kliknięcie przycisku Szkolenia w navManu
-            navMenu.SelectTrainings();
-
-            // Wpisz nazwę szkolenia
+            // Arrange
             var trainingData = TestTrainingData.LoadFromJson("../../../Resources/trainings.json");
-
-            // Uży danych pierwszego szkolenia
             var trainingFirst = trainingData.training[1];
 
-            //Wprowadzanie do wyszukiwarki danych
+            // Act
+            navMenu.SelectTrainings();
             searchField.EnterNameTraining(trainingFirst.Name);
             trainingsPage.ClickResultSearchTraining();
-
-            string expectedTrainingName = "Dziennik świetlicy – odkryj jego potencjał";
             string actualTrainingName = courseContentPage.GetNameTraining();
 
+            // Assert
+            string expectedTrainingName = "Dziennik świetlicy – odkryj jego potencjał";
             Assert.That(actualTrainingName, Is.EqualTo(expectedTrainingName));
         }
+
         [Test]
         public void TestVideoPlaybackTimeGreaterThanZero_When_ClikWatchTheTrailer()
         {
-            // Kliknięcie przycisku Szkolenia w navMenu
-            navMenu.SelectTrainings();
-
-            // Wpisz nazwę szkolenia
+            // Arrange
             var trainingData = TestTrainingData.LoadFromJson("../../../Resources/trainings.json");
-
-            // Uży danych pierwszego szkolenia
             var trainingFirst = trainingData.training[2];
 
+            // Act
+            navMenu.SelectTrainings();
             searchField.EnterNameTraining(trainingFirst.Name);
             trainingsPage.ClickResultSearchTraining();
-
-            // Kliknięcie przycisku "Obejrzyj trailer"
             courseContentPage.ClickWatchTrailerButton();
-
-            // Pobierz czas odtwarzania
             TimeSpan playbackTime = videoPlayer.GetVideoPlaybackTime();
 
-            // Sprawdzenie, czy czas odtwarzania jest większy niż zero
+            // Assert
             Assert.That(playbackTime > TimeSpan.Zero, $"Playback time {playbackTime} is not greater than 00:00:00");
         }
-
-
-
 
         [TearDown]
         public void TearDown()
         {
             if (_driver != null)
             {
-                System.Threading.Thread.Sleep(2000);
-
+                Thread.Sleep(2000);
                 _driver.Quit();
                 _driver.Dispose();
             }
