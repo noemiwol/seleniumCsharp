@@ -1,42 +1,22 @@
 ﻿using SeleniumCSharp.FunctionalTests.Pages;
 using SeleniumCSharp.FunctionalTests.PageComponents;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
 using SeleniumCSharp.FunctionalTests.Models;
-using Microsoft.Extensions.Configuration;
+using NUnit.Framework;
+using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumCSharp.FunctionalTests.Tests
 {
-    public class ExpertPageTests
+    public class ExpertPageTests : BaseTest
     {
-        private IWebDriver _driver;
-        private NavMenu navMenu;
         private ExpertsPage expertsPage;
         private ExpertDetailsModal expertDetailsModal;
-        private IConfiguration _configuration;
-
-        public ExpertPageTests()
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(AppContext.BaseDirectory)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-
-            _configuration = builder.Build();
-        }
 
         [SetUp]
-        public void Setup()
+        public override void SetUp()
         {
-            string baseUrl = _configuration["BaseUrl"];
-            _driver = new ChromeDriver();
-
-            navMenu = new NavMenu(_driver);
+            base.SetUp();
             expertsPage = new ExpertsPage(_driver);
             expertDetailsModal = new ExpertDetailsModal(_driver);
-
-            _driver.Manage().Window.Maximize();
-            _driver.Url = baseUrl;
         }
 
         [Test]
@@ -100,16 +80,6 @@ namespace SeleniumCSharp.FunctionalTests.Tests
 
             // Assert
             Assert.That(actualDescription, Is.EqualTo(expectedDescription));
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            if (_driver != null)
-            {
-                _driver.Quit();
-                _driver.Dispose();
-            }
         }
     }
 }

@@ -4,7 +4,7 @@ using SeleniumExtras.WaitHelpers;
 
 namespace SeleniumCSharp.PageComponents
 {
-    internal class VideoPlayer
+    public class VideoPlayer
     {
         private IWebDriver _driver;
 

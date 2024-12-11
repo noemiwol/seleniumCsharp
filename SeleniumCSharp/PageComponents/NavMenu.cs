@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumCSharp.FunctionalTests.PageComponents
 {
-    internal class NavMenu
+    public class NavMenu
     {
         private IWebDriver _driver;
 
