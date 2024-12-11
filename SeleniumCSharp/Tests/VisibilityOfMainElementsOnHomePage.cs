@@ -12,6 +12,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
         private IWebDriver _driver;
         private HomePage _homePage;
         private IConfiguration _configuration;
+        private NavMenu _navMenu;
 
         public VisibilityOfMainElementsOnHomePage()
         {
@@ -30,9 +31,9 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             // Tworzenie instancji WebDriver
             _driver = new ChromeDriver();
 
-            // Inicjalizacja obiektów stron
+            // Inicjalizacja obiektów strony
             _homePage = new HomePage(_driver);
-           
+            _navMenu = new NavMenu(_driver);
 
             // Konfiguracja przeglądarki
             _driver.Manage().Window.Maximize();
@@ -142,7 +143,30 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             Assert.That(iconHrefs, Contains.Item("https://www.facebook.com/Librus-Szko%C5%82a-113258060081485/"), "Nie znaleziono linku do Facebooka.");
             Assert.That(iconHrefs, Contains.Item("https://twitter.com/libruspl"), "Nie znaleziono linku do Twittera.");
         }
+        private void VerifyNavMenuLink(Action clickAction, string expectedUrl)
+        {
+            // Wykonaj akcję (kliknięcie w link w menu)
+            clickAction();
 
+            // Pobierz aktualny URL
+            string actualUrl = _driver.Url;
+
+            // Sprawdź, czy URL jest zgodny z oczekiwanym
+            Assert.That(actualUrl, Is.EqualTo(expectedUrl), $"Niepoprawny URL. Oczekiwano: {expectedUrl}, znaleziono: {actualUrl}");
+        }
+
+        [Test]
+        public void TestNavMenuLinks()
+        {
+            // Arrange
+            var navMenu = _navMenu;
+
+            // Act & Assert
+            VerifyNavMenuLink(() => navMenu.SelectIndividualOffer(), "https://akademia.librus.pl/oferta-indywidualna");
+            VerifyNavMenuLink(() => navMenu.SelectSchoolOffer(), "https://akademia.librus.pl/oferta-dla-szkol");
+            VerifyNavMenuLink(() => navMenu.SelectTrainings(), "https://akademia.librus.pl/szkolenia");
+            VerifyNavMenuLink(() => navMenu.SelectExperts(), "https://akademia.librus.pl/nasi-eksperci");
+        }
 
 
 
@@ -156,4 +180,5 @@ namespace SeleniumCSharp.FunctionalTests.Tests
             }
         }
     }
+
 }
