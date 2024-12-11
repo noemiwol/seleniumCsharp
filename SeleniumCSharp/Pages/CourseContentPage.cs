@@ -4,7 +4,7 @@ using SeleniumExtras.WaitHelpers;
 
 namespace SeleniumCSharp.FunctionalTests.Pages
 {
-    internal class CourseContentPage
+    public class CourseContentPage
     {
         private IWebDriver _driver;
 
