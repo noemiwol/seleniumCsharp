@@ -1,8 +1,5 @@
-﻿using SeleniumCSharp.FunctionalTests.Pages;
-using SeleniumCSharp.FunctionalTests.PageComponents;
+﻿using OpenQA.Selenium.Support.UI;
 using SeleniumCSharp.FunctionalTests.Models;
-using NUnit.Framework;
-using OpenQA.Selenium.Support.UI;
 using SeleniumCSharp.PageComponents;
 
 namespace SeleniumCSharp.FunctionalTests.Tests
