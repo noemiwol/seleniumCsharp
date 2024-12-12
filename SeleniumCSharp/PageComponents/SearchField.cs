@@ -21,6 +21,7 @@ namespace SeleniumCSharp.FunctionalTests.PageComponents
             // Czekaj 2 sekund
             Thread.Sleep(2000);
         }
+
         public void ToggleFilterByName(string filterName)
         {
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));

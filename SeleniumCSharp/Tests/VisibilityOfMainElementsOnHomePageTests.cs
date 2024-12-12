@@ -1,10 +1,6 @@
-﻿using SeleniumCSharp.FunctionalTests.Pages;
+﻿using OpenQA.Selenium;
 using SeleniumCSharp.FunctionalTests.PageComponents;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using OpenQA.Selenium;
+using SeleniumCSharp.FunctionalTests.Pages;
 
 namespace SeleniumCSharp.FunctionalTests.Tests
 {

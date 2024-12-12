@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
 
 namespace SeleniumCSharp.PageComponents
 {
@@ -44,8 +43,5 @@ namespace SeleniumCSharp.PageComponents
             // Zwróć czas odtwarzania jako TimeSpan
             return TimeSpan.FromSeconds(currentTime);
         }
-
-
-
     }
 }
