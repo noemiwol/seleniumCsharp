@@ -13,7 +13,6 @@ namespace SeleniumCSharp.FunctionalTests
         protected IWebDriver _driver;
         protected IConfiguration _configuration;
 
-        // Komponenty strony
         protected HomePage homePage;
         protected NavMenu navMenu;
         protected SearchField searchField;
@@ -55,7 +54,7 @@ namespace SeleniumCSharp.FunctionalTests
         {
             if (_driver != null)
             {
-                Thread.Sleep(2000); // Opcjonalne
+                Thread.Sleep(1000); 
                 _driver.Quit();
                 _driver.Dispose();
             }

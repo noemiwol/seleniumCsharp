@@ -19,7 +19,7 @@ namespace SeleniumCSharp.FunctionalTests.Tests
         }
 
         [Test]
-        public void TestGoToTrainingPage_When_ClickTrainingsOnNavMenu()
+        public void TestGoToTrainingPageWhenClickTrainingsOnNavMenu()
         {
             // Arrange
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));

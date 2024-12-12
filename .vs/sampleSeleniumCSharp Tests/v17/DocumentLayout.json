@@ -3,60 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\tests\\expertpagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\tests\\expertpagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\tests\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\tests\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\pagecomponents\\searchfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\pagecomponents\\searchfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\tests\\searchtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\tests\\searchtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\tests\\playvideoaslicensedusertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\tests\\playvideoaslicensedusertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\tests\\searchandfiltertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\tests\\searchandfiltertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\tests\\visibilityofmainelementsonhomepagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\tests\\visibilityofmainelementsonhomepagetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\resources\\trainings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\resources\\trainings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\resources\\experts.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\resources\\experts.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\pages\\trainingspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\pages\\trainingspage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\models\\trainingcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\models\\trainingcredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\tests\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\tests\\basetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\models\\expertprofileprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\models\\expertprofileprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\tests\\filterstests .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\tests\\filterstests .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\usings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\usings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\pagecomponents\\expertdetailsmodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\pagecomponents\\expertdetailsmodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\seleniumcsharp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\seleniumcsharp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|c:\\users\\lenovo\\source\\repos\\seleniumcsharp\\seleniumcsharp\\pagecomponents\\filters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D43D618C-7A73-4D4A-A374-A2412DC3B0AD}|SeleniumCSharp\\SeleniumCSharp.csproj|solutionrelative:seleniumcsharp\\pagecomponents\\filters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,8 +42,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseTest.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\BaseTest.cs",
+              "RelativeDocumentMoniker": "SeleniumCSharp\\Tests\\BaseTest.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\BaseTest.cs",
+              "RelativeToolTip": "SeleniumCSharp\\Tests\\BaseTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T12:05:45.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "trainings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Resources\\trainings.json",
+              "RelativeDocumentMoniker": "SeleniumCSharp\\Resources\\trainings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Resources\\trainings.json",
+              "RelativeToolTip": "SeleniumCSharp\\Resources\\trainings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-12T12:02:40.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayVideoAsLicensedUserTests.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\PlayVideoAsLicensedUserTests.cs",
+              "RelativeDocumentMoniker": "SeleniumCSharp\\Tests\\PlayVideoAsLicensedUserTests.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\PlayVideoAsLicensedUserTests.cs",
+              "RelativeToolTip": "SeleniumCSharp\\Tests\\PlayVideoAsLicensedUserTests.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwCkAAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T11:57:00.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SearchTests.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Source\\Repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\SearchTests.cs",
+              "RelativeDocumentMoniker": "SeleniumCSharp\\Tests\\SearchTests.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Source\\Repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\SearchTests.cs*",
+              "RelativeToolTip": "SeleniumCSharp\\Tests\\SearchTests.cs*",
+              "ViewState": "AQIAABAAAAAAAAAAAAA9wBsAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T11:53:33.481Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -87,6 +115,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -137,185 +169,59 @@
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SearchField.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\PageComponents\\SearchField.cs",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\PageComponents\\SearchField.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\PageComponents\\SearchField.cs*",
-              "RelativeToolTip": "SeleniumCSharp\\PageComponents\\SearchField.cs*",
-              "ViewState": "AQIAAB4AAAAAAAAAAAA0wC0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:40:37.592Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BaseTest.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\BaseTest.cs",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\Tests\\BaseTest.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\BaseTest.cs*",
-              "RelativeToolTip": "SeleniumCSharp\\Tests\\BaseTest.cs*",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAowEAAAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "FiltersTests .cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\FiltersTests .cs",
+              "RelativeDocumentMoniker": "SeleniumCSharp\\Tests\\FiltersTests .cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\FiltersTests .cs",
+              "RelativeToolTip": "SeleniumCSharp\\Tests\\FiltersTests .cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T10:29:20.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExpertPageTests.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\ExpertPageTests.cs",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\Tests\\ExpertPageTests.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\ExpertPageTests.cs*",
-              "RelativeToolTip": "SeleniumCSharp\\Tests\\ExpertPageTests.cs*",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAswFUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:55:59.391Z",
+              "WhenOpened": "2024-12-12T11:25:03.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PlayVideoAsLicensedUserTests.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\PlayVideoAsLicensedUserTests.cs",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\Tests\\PlayVideoAsLicensedUserTests.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\PlayVideoAsLicensedUserTests.cs",
-              "RelativeToolTip": "SeleniumCSharp\\Tests\\PlayVideoAsLicensedUserTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "TrainingsPage.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Pages\\TrainingsPage.cs",
+              "RelativeDocumentMoniker": "SeleniumCSharp\\Pages\\TrainingsPage.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Pages\\TrainingsPage.cs",
+              "RelativeToolTip": "SeleniumCSharp\\Pages\\TrainingsPage.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAYwGQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T12:22:40.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SearchAndFilterTests.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\SearchAndFilterTests.cs",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\Tests\\SearchAndFilterTests.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\SearchAndFilterTests.cs*",
-              "RelativeToolTip": "SeleniumCSharp\\Tests\\SearchAndFilterTests.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T10:26:50.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "VisibilityOfMainElementsOnHomePageTests.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Source\\Repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\VisibilityOfMainElementsOnHomePageTests.cs",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\Tests\\VisibilityOfMainElementsOnHomePageTests.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Source\\Repos\\seleniumCsharp\\SeleniumCSharp\\Tests\\VisibilityOfMainElementsOnHomePageTests.cs*",
-              "RelativeToolTip": "SeleniumCSharp\\Tests\\VisibilityOfMainElementsOnHomePageTests.cs*",
-              "ViewState": "AQIAAIsAAAAAAAAAAAAQwKEAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T09:19:09.929Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\.gitignore",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\.gitignore",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\.gitignore",
-              "RelativeToolTip": "SeleniumCSharp\\.gitignore",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-10T12:40:01.073Z",
+              "WhenOpened": "2024-12-11T11:35:05.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "trainings.json",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Resources\\trainings.json",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\Resources\\trainings.json",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Resources\\trainings.json",
-              "RelativeToolTip": "SeleniumCSharp\\Resources\\trainings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-10T13:41:36.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "experts.json",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Resources\\experts.json",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\Resources\\experts.json",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Resources\\experts.json",
-              "RelativeToolTip": "SeleniumCSharp\\Resources\\experts.json",
-              "ViewState": "AQIAABkAAAAAAAAAAAAqwCEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-10T12:41:02.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TrainingCredentials.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Models\\TrainingCredentials.cs",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\Models\\TrainingCredentials.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Models\\TrainingCredentials.cs",
-              "RelativeToolTip": "SeleniumCSharp\\Models\\TrainingCredentials.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBMAAAABAAAA",
+              "Title": "Filters.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\PageComponents\\Filters.cs",
+              "RelativeDocumentMoniker": "SeleniumCSharp\\PageComponents\\Filters.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\PageComponents\\Filters.cs",
+              "RelativeToolTip": "SeleniumCSharp\\PageComponents\\Filters.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAkwCAAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:40:17.898Z",
+              "WhenOpened": "2024-12-12T11:07:49.646Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ExpertProfileProcessor.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Models\\ExpertProfileProcessor.cs",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\Models\\ExpertProfileProcessor.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Models\\ExpertProfileProcessor.cs",
-              "RelativeToolTip": "SeleniumCSharp\\Models\\ExpertProfileProcessor.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAzwBUAAAABAAAA",
+              "DocumentIndex": 6,
+              "Title": "ExpertDetailsModal.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\PageComponents\\ExpertDetailsModal.cs",
+              "RelativeDocumentMoniker": "SeleniumCSharp\\PageComponents\\ExpertDetailsModal.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\PageComponents\\ExpertDetailsModal.cs",
+              "RelativeToolTip": "SeleniumCSharp\\PageComponents\\ExpertDetailsModal.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T12:40:31.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\appsettings.json",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\appsettings.json",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\appsettings.json",
-              "RelativeToolTip": "SeleniumCSharp\\appsettings.json",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAcwAoAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-10T12:45:48.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Usings.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Usings.cs",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\Usings.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\seleniumCsharp\\SeleniumCSharp\\Usings.cs",
-              "RelativeToolTip": "SeleniumCSharp\\Usings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T12:40:20.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SeleniumCSharp.csproj",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Source\\Repos\\seleniumCsharp\\SeleniumCSharp\\SeleniumCSharp.csproj",
-              "RelativeDocumentMoniker": "SeleniumCSharp\\SeleniumCSharp.csproj",
-              "ToolTip": "C:\\Users\\Lenovo\\Source\\Repos\\seleniumCsharp\\SeleniumCSharp\\SeleniumCSharp.csproj",
-              "RelativeToolTip": "SeleniumCSharp\\SeleniumCSharp.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-10T12:38:06.037Z",
+              "WhenOpened": "2024-12-12T11:08:06.545Z",
               "EditorCaption": ""
             }
           ]
