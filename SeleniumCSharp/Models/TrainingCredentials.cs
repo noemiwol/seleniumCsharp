@@ -2,12 +2,12 @@
 
 namespace SeleniumCSharp.FunctionalTests.Models
 {
-    internal class TrainingCredentials
+    public class TrainingCredentials
     {
         public string Name { get; set; }
     }
 
-    internal class TestTrainingData
+    public class TestTrainingData
     {
         public List<TrainingCredentials> training { get; set; }
 
