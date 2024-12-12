@@ -2,14 +2,14 @@
 
 namespace SeleniumCSharp.FunctionalTests.Models
 {
-    internal class ExpertProfileProcessor
+    public class ExpertProfileProcessor
     {
         public string NameSurname { get; set; }
         public string ShortDescription { get; set; }
         public string Description { get; set; }
     }
 
-    internal class TestExpertProfileProcessor
+    public class TestExpertProfileProcessor
     {
         public List<ExpertProfileProcessor> expert { get; set; }
 
