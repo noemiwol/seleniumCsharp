@@ -12,7 +12,6 @@ namespace SeleniumCSharp.FunctionalTests
         protected IWebDriver _driver;
         protected IConfiguration _configuration;
 
-        // Komponenty strony
         protected HomePage homePage;
 
         protected NavMenu navMenu;
@@ -37,7 +36,6 @@ namespace SeleniumCSharp.FunctionalTests
             string baseUrl = _configuration["BaseUrl"];
             _driver = new ChromeDriver();
 
-            // Inicjalizacja komponentów strony
             homePage = new HomePage(_driver);
             navMenu = new NavMenu(_driver);
             searchField = new SearchField(_driver);

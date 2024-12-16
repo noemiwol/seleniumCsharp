@@ -22,7 +22,7 @@ namespace SeleniumCSharp.FunctionalTests.Pages
 
         public void ClickWatchTrainingButton()
         {
-            Thread.Sleep(2000); // Czekaj 2 sekund
+            Thread.Sleep(2000);
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
             IWebElement watchButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".MuiButton-root.MuiLoadingButton-root.MuiButton-containedPrimary")));
             watchButton.Click();
@@ -30,7 +30,7 @@ namespace SeleniumCSharp.FunctionalTests.Pages
 
         public void ClickWatchTrailerButton()
         {
-            Thread.Sleep(2000); // Czekaj 2 sekund
+            Thread.Sleep(2000);
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
             IWebElement watchButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//button[contains(text(), 'Zobacz zwiastun')]")));
             watchButton.Click();
@@ -38,13 +38,12 @@ namespace SeleniumCSharp.FunctionalTests.Pages
 
         public void ClickWatchTrainingButtonAfterLogged()
         {
-            Thread.Sleep(2000); // Czekaj 2 sekund
+            Thread.Sleep(2000);
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
             IWebElement watchButton = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".MuiButton-root.MuiLoadingButton-root.MuiButton-containedPrimary")));
             watchButton.Click();
 
-            // Krótkie opóźnienie, aby dać wideo czas na rozpoczęcie
-            Thread.Sleep(2000); // Czekaj 2 sekund
+            Thread.Sleep(2000);
         }
     }
 }

@@ -18,7 +18,6 @@ namespace SeleniumCSharp.FunctionalTests.PageComponents
             IWebElement searchField = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("input.MuiInputBase-input")));
             searchField.Clear();
             searchField.SendKeys(name);
-            // Czekaj 2 sekund
             Thread.Sleep(2000);
         }
 
